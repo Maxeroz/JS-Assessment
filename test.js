@@ -45,3 +45,17 @@ function fizzBuzz() {
     }
   }
 }
+
+// 3) Разбиение массива на части
+
+function chunkArray(array, size) {
+  // 1) Декларируем переменную result. Мы можем использовать const декларацию, так как в следующем этапе будет использоваться метод массива "push", который мутирует данные.
+  const result = [];
+
+  for (let i = 0; i < array.length; i += size) {
+    // 2) Используем slice, чтобы взять подмассив длиной size и добавляем его в result при каждой итерации лупа.
+    result.push(array.slice(i, i + size));
+  }
+
+  return result;
+}
